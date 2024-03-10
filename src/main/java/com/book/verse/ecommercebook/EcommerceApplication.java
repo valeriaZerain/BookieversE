@@ -10,9 +10,12 @@ import java.io.IOException;
 public class EcommerceApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(EcommerceApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        // Cargar la interfaz de usuario desde el archivo FXML
+        FXMLLoader fxmlLoader = new FXMLLoader(EcommerceApplication.class.getResource("pantallaprincipal.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 550, 550);
+
+        // Configurar el escenario principal
+        stage.setTitle("Eccomerce de Libros");
         stage.setScene(scene);
         stage.show();
     }
