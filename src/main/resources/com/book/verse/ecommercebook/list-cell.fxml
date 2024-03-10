@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.components.BookListViewCell">
+   <children>
+      <Label layoutX="152.0" layoutY="17.0" text="Titulo:">
+         <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="155.0" layoutY="52.0" text="Autor:">
+         <font>
+            <Font name="Times New Roman Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="152.0" layoutY="85.0" text="Descripcion:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageBook" fitHeight="216.0" fitWidth="137.0" layoutX="7.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="152.0" layoutY="205.0" text="Precio:">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="shopButton" layoutX="370.0" layoutY="201.0" mnemonicParsing="false" text="Comprar" />
+      <TextField fx:id="titleBook" editable="false" layoutX="212.0" layoutY="11.0" opacity="0.0">
+         <font>
+            <Font name="Times New Roman" size="17.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="authorBook" editable="false" layoutX="212.0" layoutY="47.0" opacity="0.0" prefHeight="28.0" prefWidth="213.0">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="descriptionBook" alignment="TOP_LEFT" editable="false" layoutX="224.0" layoutY="79.0" opacity="0.0" prefHeight="113.0" prefWidth="201.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="priceBook" alignment="CENTER_RIGHT" editable="false" layoutX="202.0" layoutY="199.0" opacity="0.0" prefHeight="28.0" prefWidth="42.0">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="244.0" layoutY="205.0" text="Bs.">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

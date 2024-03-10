@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class OrderImpl implements OrderDao{
+public class OrderDaoImpl implements OrderDao{
     static Connection con
             = DatabaseSingleton.getInstance().getConnection();
     @Override
