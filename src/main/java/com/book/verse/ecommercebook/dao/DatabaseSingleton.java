@@ -1,4 +1,4 @@
-package org.example;
+package com.book.verse.ecommercebook.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ public class DatabaseSingleton {
     private Connection connection;
     private DatabaseSingleton(){
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommercebooks", "root", "Vale123");
+            connection = DriverManager.getConnection("jdbc:mysql://viaduct.proxy.rlwy.net:11657/railway", "root", "DgEBaCa-EEgbB4HB6ce56fF6B3AeF-c2");
         }catch (SQLException e){
             e.printStackTrace();
         }

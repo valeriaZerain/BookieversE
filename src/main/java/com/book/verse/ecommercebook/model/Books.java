@@ -1,4 +1,4 @@
-package org.example.model;
+package com.book.verse.ecommercebook.model;
 
 import java.math.BigInteger;
 
