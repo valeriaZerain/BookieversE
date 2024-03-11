@@ -7,4 +7,6 @@ import java.sql.SQLException;
 public interface MainCommerce {
     SearchBookResponse listBooks (String criterial) throws SQLException;
 
+    SearchBookResponse getBooks () throws SQLException;
+
 }

@@ -7,13 +7,16 @@ import com.book.verse.ecommercebook.model.Books;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class MainStoreController {
+public class MainStoreController implements Initializable {
     @FXML
     private TextField txtSearch;
 
@@ -25,10 +28,17 @@ public class MainStoreController {
 
     private ObservableList<Books> booksResultList;
 
+    MainCommerceImpl searchProcess = new MainCommerceImpl();
+
+    public MainStoreController() throws SQLException {
+        SearchBookResponse response = searchProcess.getBooks();
+        booksResultList = FXCollections.observableArrayList();
+        booksResultList.addAll(response.getResultList());
+    }
+
     @FXML
     protected void onSearchButtonClick() throws SQLException {
         listView = new ListView<>();
-        MainCommerceImpl searchProcess = new MainCommerceImpl();
         SearchBookResponse response = searchProcess.listBooks(txtSearch.getText());
         if (response.getResultList() != null || response.getResultList().size() > 0) {
             booksResultList = FXCollections.observableArrayList();
@@ -36,7 +46,14 @@ public class MainStoreController {
             listView.setItems(booksResultList);
             listView.setCellFactory(bookListView -> new BookListViewCell());
             rootPane.setContent(listView);
-            System.out.println(response.toString());
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        listView = new ListView<>();
+        listView.setItems(booksResultList);
+        listView.setCellFactory(bookListView -> new BookListViewCell());
+        rootPane.setContent(listView);
     }
 }

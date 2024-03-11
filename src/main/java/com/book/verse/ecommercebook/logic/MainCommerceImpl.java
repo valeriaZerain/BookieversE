@@ -22,4 +22,19 @@ public class MainCommerceImpl implements MainCommerce {
         }
         return response;
     }
+
+    @Override
+    public SearchBookResponse getBooks() throws SQLException {
+        SearchBookResponse response = new SearchBookResponse();
+        BooksDaoImpl buscador = new BooksDaoImpl();
+        List<Books> result = buscador.getBooks();
+        if (result == null ||result.isEmpty()) {
+            response.setMessage("No se encontraron libros con su criterio");
+
+        } else {
+            response.setMessage(String.format("Se encontraron %d libros",result.size()));
+            response.setResultList(result);
+        }
+        return response;
+    }
 }
