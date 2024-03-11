@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="562.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PantallaEstadoCompraController">
+<AnchorPane prefHeight="562.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PantallaComprarController">
    <children>
       <Label layoutX="45.0" layoutY="30.0" text="Detalles de compra:">
          <font>
@@ -54,7 +54,7 @@
       <TextField fx:id="quantityShop" layoutX="276.0" layoutY="362.0" prefHeight="26.0" prefWidth="42.0" promptText="ej: 1">
          <font>
             <Font name="Times New Roman" size="13.0" />
-         </font>
+         </font>Sce
       </TextField>
       <Button fx:id="botonTigoMoney" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" onAction="#irpantallatigo" prefHeight="42.0" prefWidth="84.0" text="TigoMoney" textFill="#3034b2" />
       <Label layoutX="277.0" layoutY="202.0" prefHeight="27.0" prefWidth="194.0" text="Nombre">
