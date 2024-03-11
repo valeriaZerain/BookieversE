@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PantallaEstadoController {
+public class PantallaFinalController {
 
     public void irAlMenu(ActionEvent event) throws IOException {
         Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("main-store.fxml"));
