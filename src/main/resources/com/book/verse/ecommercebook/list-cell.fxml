@@ -7,55 +7,55 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
+<Pane fx:id="gridPane" maxHeight="257.0" maxWidth="900.0" minHeight="231.0" minWidth="900.0" prefHeight="231.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="257.0" prefWidth="447.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.components.BookListViewCell">
-   <children>
-      <Label layoutX="152.0" layoutY="17.0" text="Titulo:">
-         <font>
-            <Font name="Times New Roman Bold" size="17.0" />
-         </font>
-      </Label>
-      <Label layoutX="155.0" layoutY="52.0" text="Autor:">
-         <font>
+    <Label layoutX="209.0" layoutY="43.0" text="Autor:">
+        <font>
             <Font name="Times New Roman Bold" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="152.0" layoutY="85.0" text="Descripcion:">
-         <font>
+        </font>
+    </Label>
+    <Label layoutX="185.0" layoutY="72.0" text="Descripcion:">
+        <font>
             <Font name="Times New Roman Bold" size="13.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="imageBook" fitHeight="216.0" fitWidth="137.0" layoutX="7.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="152.0" layoutY="205.0" text="Precio:">
-         <font>
+        </font>
+    </Label>
+    <ImageView fx:id="imageBook" fitHeight="231.0" fitWidth="165.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+    <Label layoutX="220.0" layoutY="146.0" text="Precio:">
+        <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
-         </font>
-      </Label>
-      <Button fx:id="shopButton" layoutX="370.0" layoutY="201.0" mnemonicParsing="false" text="Comprar" />
-      <TextField fx:id="titleBook" editable="false" layoutX="212.0" layoutY="11.0" opacity="0.0">
-         <font>
-            <Font name="Times New Roman" size="17.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="authorBook" editable="false" layoutX="212.0" layoutY="47.0" opacity="0.0" prefHeight="28.0" prefWidth="213.0">
-         <font>
+        </font>
+    </Label>
+    <Button fx:id="shopButton" layoutX="747.0" layoutY="168.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="108.0" text="Comprar" />
+    <TextField fx:id="authorBook" editable="false" layoutX="260.0" layoutY="38.0" opacity="0.0" prefHeight="28.0" prefWidth="337.0">
+        <font>
             <Font name="Times New Roman" size="15.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="descriptionBook" alignment="TOP_LEFT" editable="false" layoutX="224.0" layoutY="79.0" opacity="0.0" prefHeight="113.0" prefWidth="201.0">
-         <font>
+        </font>
+    </TextField>
+    <TextField fx:id="descriptionBook" alignment="TOP_LEFT" editable="false" layoutX="269.0" layoutY="72.0" opacity="0.0" prefHeight="68.0" prefWidth="605.0">
+        <font>
             <Font name="Times New Roman" size="13.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="priceBook" alignment="CENTER_RIGHT" editable="false" layoutX="202.0" layoutY="199.0" opacity="0.0" prefHeight="28.0" prefWidth="42.0">
-         <font>
+        </font>
+    </TextField>
+    <TextField fx:id="priceBook" alignment="CENTER_RIGHT" editable="false" layoutX="269.0" layoutY="140.0" opacity="0.0" prefHeight="28.0" prefWidth="42.0">
+        <font>
             <Font name="Times New Roman" size="14.0" />
-         </font>
-      </TextField>
-      <Label layoutX="244.0" layoutY="205.0" text="Bs.">
-         <font>
+        </font>
+    </TextField>
+    <Label layoutX="315.0" layoutY="146.0" text="Bs.">
+        <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
-         </font>
-      </Label>
-   </children>
+        </font>
+    </Label>
+    <Label layoutX="206.0" layoutY="8.0" text="Titulo:">
+        <font>
+            <Font name="Times New Roman Bold" size="17.0" />
+        </font>
+    </Label>
+    <TextField fx:id="titleBook" editable="false" layoutX="269.0" layoutY="2.0" opacity="0.0" prefHeight="32.0" prefWidth="327.0">
+        <font>
+            <Font name="Times New Roman" size="17.0" />
+        </font>
+    </TextField>
+
+
 </Pane>
