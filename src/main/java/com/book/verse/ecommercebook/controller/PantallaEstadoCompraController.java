@@ -1,9 +1,8 @@
 package com.book.verse.ecommercebook.controller;
 
 import com.book.verse.ecommercebook.EcommerceApplication;
-import com.book.verse.ecommercebook.dao.ClientDaoImpl;
+import com.book.verse.ecommercebook.controller.components.PagoTarjeta;
 import com.book.verse.ecommercebook.data.SearchClientResponse;
-import com.book.verse.ecommercebook.logic.PurchaceState;
 import com.book.verse.ecommercebook.logic.PurchaseStateImpl;
 import com.book.verse.ecommercebook.model.Books;
 import com.book.verse.ecommercebook.model.Client;
@@ -61,12 +60,19 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
     @FXML
     private Button buttonVerify;
 
+    private double totalprice;
+
     private FXMLLoader fxmlLoader;
 
     private Pane gridPane;
     private PurchaseStateImpl searchProcess = new PurchaseStateImpl();
     private Client resultClient;
     private Books book;
+
+    public double getTotalprice(){
+        return totalprice;
+    }
+
     public void initBookDetails(Books book) {
         tituloCompra.setText(book.getTitle());
         precioCompra.setText(book.getPrice().toString());
@@ -87,8 +93,16 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
 
     @FXML
     void IrPagoTarjeta(ActionEvent event) throws IOException {
-        Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("pagoTarjeta.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoTarjeta.fxml"));
+        Parent nextScreenParent = loader.load();
+        PagoTarjeta pagoTarjeta = loader.getController();
+        // Obtener el libro actual de la celda de la lista
+
+        // Inicializar los detalles del libro en la pantalla de estado de compra
+
         Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
+
+        pagoTarjeta.initMontoT(totalprice);
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
@@ -97,10 +111,18 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
     }
 
     @FXML
-    void irpantallaqr(ActionEvent event) throws IOException {
+    void irpantallapaypal(ActionEvent event) throws IOException {
 
-        Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("pagoqr.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagopaypal.fxml"));
+        Parent nextScreenParent = loader.load();
+        Pagopaypal pagopaypal = loader.getController();
+        // Obtener el libro actual de la celda de la lista
+
+        // Inicializar los detalles del libro en la pantalla de estado de compra
+
         Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
+
+        pagopaypal.initMonto(totalprice);
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
@@ -128,8 +150,28 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
             quantityAvailable.setText("Solo hay " + stock + " libro(s) disponible(s)");
         }else{
             quantityAvailable.setText("Cantidad de libros disponibles en stock");
-            double totalPrice = book.getPrice() * quantity;
-            lblTotalPrice.setText(totalPrice + "Bs.");
+             totalprice = book.getPrice() * quantity;
+            lblTotalPrice.setText(totalprice + "Bs.");
         }
+    }
+
+
+    public void irpantallatigo(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagotigo.fxml"));
+        Parent nextScreenParent = loader.load();
+        Pagotigo pagotigo = loader.getController();
+        // Obtener el libro actual de la celda de la lista
+
+        // Inicializar los detalles del libro en la pantalla de estado de compra
+
+        Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
+
+        pagotigo.initMontotigomoney(totalprice);
+
+        Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(nextScreenScene);
+        window.show();
     }
 }

@@ -1,4 +1,4 @@
-package com.book.verse.ecommercebook.controller.components;
+package com.book.verse.ecommercebook.controller;
 
 import com.book.verse.ecommercebook.EcommerceApplication;
 import javafx.event.ActionEvent;
@@ -12,21 +12,21 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class PagoTarjeta {
+public class Pagotigo {
 
     @FXML
-    private Label montotarjeta;
+    private Label montotm;
 
     @FXML
-    private Button cancelarpago1;
+    private Button botoncancelartm;
 
-    public void initMontoT (double totalPrice) {
-        montotarjeta.setText(totalPrice + "");
+    public void initMontotigomoney (double totalPrice) {
+        montotm.setText(totalPrice + "");
 
     }
 
     @FXML
-    void caancelartarjeta(ActionEvent event) throws IOException {
+    void cancelarpagotigomoney(ActionEvent event) throws IOException {
 
         Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("pantallacomprar.fxml"));
         Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
@@ -37,4 +37,5 @@ public class PagoTarjeta {
         window.show();
 
     }
+
 }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.Pagotigo">
+   <children>
+      <Label layoutX="256.0" layoutY="36.0" text="Pago por Tigo Money">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="112.0" text="Numero de telefono:" />
+      <Label layoutX="204.0" layoutY="157.0" text="Pin y contrasenha:" />
+      <Label layoutX="167.0" layoutY="200.0" text="Numero del destinatario:" />
+      <TextField layoutX="381.0" layoutY="108.0" />
+      <Label layoutX="233.0" layoutY="251.0" text="Monto:">
+         <font>
+            <Font name="Bodoni MT Black" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="382.0" layoutY="153.0" />
+      <TextField layoutX="382.0" layoutY="196.0" />
+      <Label fx:id="montotm" layoutX="424.0" layoutY="251.0" text="0.00">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="252.0" text="Bs.">
+         <font>
+            <Font name="Bodoni MT Black" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="243.0" layoutY="312.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0" text="Pagar" textFill="#31b449" />
+      <Button fx:id="botoncancelartm" layoutX="446.0" layoutY="312.0" mnemonicParsing="false" onAction="#cancelarpagotigomoney" prefHeight="43.0" prefWidth="110.0" text="Cancelar Pago" textFill="#c93939" />
+   </children>
+</AnchorPane>
