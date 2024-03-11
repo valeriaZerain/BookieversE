@@ -35,26 +35,26 @@
             <Font name="Times New Roman Bold" size="17.0" />
         </font>
     </Label>
-   <Label fx:id="lblTitulo" layoutX="276.0" layoutY="10.0" prefHeight="17.0" prefWidth="579.0">
-      <font>
-         <Font name="Times New Roman" size="17.0" />
-      </font>
-   </Label>
-   <Label fx:id="lblAuthor" layoutX="276.0" layoutY="42.0" prefHeight="17.0" prefWidth="579.0">
-      <font>
-         <Font name="Times New Roman" size="15.0" />
-      </font>
-   </Label>
-   <Label fx:id="lblDescription" alignment="TOP_LEFT" layoutX="276.0" layoutY="71.0" prefHeight="72.0" prefWidth="579.0" textAlignment="JUSTIFY">
-      <font>
-         <Font name="Times New Roman" size="13.0" />
-      </font>
-   </Label>
-   <Label fx:id="lblPrice" alignment="CENTER_RIGHT" layoutX="269.0" layoutY="146.0" prefHeight="20.0" prefWidth="43.0">
-      <font>
-         <Font name="Times New Roman" size="14.0" />
-      </font>
-   </Label>
+    <Label fx:id="lblTitulo" layoutX="276.0" layoutY="10.0" prefHeight="17.0" prefWidth="579.0">
+        <font>
+            <Font name="Times New Roman" size="17.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblAuthor" layoutX="276.0" layoutY="42.0" prefHeight="17.0" prefWidth="579.0">
+        <font>
+            <Font name="Times New Roman" size="15.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblDescription" alignment="TOP_LEFT" layoutX="276.0" layoutY="71.0" prefHeight="72.0" prefWidth="579.0" textAlignment="JUSTIFY" wrapText="true">
+        <font>
+            <Font name="Times New Roman" size="13.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblPrice" alignment="CENTER_RIGHT" layoutX="269.0" layoutY="146.0" prefHeight="20.0" prefWidth="43.0">
+        <font>
+            <Font name="Times New Roman" size="14.0" />
+        </font>
+    </Label>
 
 
 </Pane>
