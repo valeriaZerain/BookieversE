@@ -2,13 +2,18 @@ package com.book.verse.ecommercebook.controller.components;
 
 import com.book.verse.ecommercebook.EcommerceApplication;
 import com.book.verse.ecommercebook.model.Books;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -32,6 +37,22 @@ public class BookListViewCell extends ListCell<Books> {
 
     @FXML
     private Pane gridPane;
+
+    @FXML
+    private Button shopButton;
+
+    @FXML
+    void irPantallaCompra(ActionEvent event) throws IOException {
+
+        Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("PantallaEstadoCompra.fxml"));
+        Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
+
+        Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(nextScreenScene);
+        window.show();
+
+    }
 
     @Override
     protected void updateItem(Books book, boolean empty) {
