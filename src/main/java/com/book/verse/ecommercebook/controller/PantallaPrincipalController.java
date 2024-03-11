@@ -13,17 +13,11 @@ import java.io.IOException;
 public class PantallaPrincipalController {
     @FXML
     private void goToNextScreen(ActionEvent event) throws IOException {
-        // Imprime la ubicación del recurso para asegurarte de que se esté cargando correctamente
-        System.out.println(EcommerceApplication.class.getResource("main-store.fxml"));
-
-        // Cargar la pantalla siguiente
         Parent nextScreenParent = FXMLLoader.load(EcommerceApplication.class.getResource("main-store.fxml"));
         Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
 
-        // Obtener la ventana actual
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
-        // Mostrar la pantalla siguiente
         window.setScene(nextScreenScene);
         window.show();
     }

@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="gridPane" maxHeight="257.0" maxWidth="900.0" minHeight="231.0" minWidth="900.0" prefHeight="231.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="gridPane" maxHeight="257.0" maxWidth="900.0" minHeight="231.0" minWidth="900.0" prefHeight="231.0"
+      prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
 
     <Label layoutX="209.0" layoutY="43.0" text="Autor:">
         <font>
@@ -18,13 +19,18 @@
             <Font name="Times New Roman Bold" size="13.0" />
         </font>
     </Label>
-    <ImageView fx:id="imageBook" fitHeight="231.0" fitWidth="165.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="imageBook" fitHeight="231.0" fitWidth="165.0" layoutX="14.0" layoutY="14.0"
+               pickOnBounds="true" preserveRatio="true" />
     <Label layoutX="220.0" layoutY="146.0" text="Precio:">
         <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
         </font>
     </Label>
-    <Button fx:id="shopButton" layoutX="747.0" layoutY="168.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="108.0" text="Comprar" />
+    <Button fx:id="shopButton"
+            layoutX="747.0" layoutY="168.0" mnemonicParsing="false"
+            prefHeight="44.0" prefWidth="108.0" text="Comprar"
+    />
+
     <Label layoutX="315.0" layoutY="146.0" text="Bs.">
         <font>
             <Font name="Times New Roman Bold Italic" size="14.0" />
@@ -45,7 +51,8 @@
          <Font name="Times New Roman" size="15.0" />
       </font>
    </Label>
-   <Label fx:id="lblDescription" alignment="TOP_LEFT" layoutX="276.0" layoutY="71.0" prefHeight="72.0" prefWidth="579.0" textAlignment="JUSTIFY">
+   <Label fx:id="lblDescription" alignment="TOP_LEFT" layoutX="276.0" layoutY="71.0"
+          prefHeight="72.0" prefWidth="579.0" textAlignment="JUSTIFY">
       <font>
          <Font name="Times New Roman" size="13.0" />
       </font>
@@ -55,6 +62,5 @@
          <Font name="Times New Roman" size="14.0" />
       </font>
    </Label>
-
 
 </Pane>

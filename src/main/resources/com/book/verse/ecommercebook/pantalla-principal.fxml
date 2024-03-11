@@ -5,15 +5,13 @@
 <?import javafx.scene.image.Image?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.book.verse.ecommercebook.controller.PantallaPrincipalController"
-      alignment="TOP_CENTER" style="-fx-padding: 20; -fx-spacing: 15;">
-  <!-- Contenedor para la imagen con un margen inferior -->
+      alignment="CENTER" style="-fx-padding: 20; -fx-spacing: 15;">
   <VBox alignment="CENTER">
     <ImageView fitHeight="450" fitWidth="450">
       <Image url="@imagenes/logo.jpg" />
     </ImageView>
   </VBox>
 
-  <!-- Contenedor para el botón -->
   <VBox alignment="BOTTOM_CENTER">
     <Button text="📖" onAction="#goToNextScreen"
             prefWidth="50" prefHeight="50">
