@@ -37,6 +37,8 @@ public class MainStoreController implements Initializable {
         booksResultList = FXCollections.observableArrayList();
         booksResultList.addAll(response.getResultList());
     }
+
+
     @FXML
     protected void onSearchButtonClick() throws SQLException {
         listView = new ListView<>();

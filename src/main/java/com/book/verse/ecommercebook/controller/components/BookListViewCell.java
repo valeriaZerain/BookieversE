@@ -1,7 +1,6 @@
 package com.book.verse.ecommercebook.controller.components;
 
 import com.book.verse.ecommercebook.EcommerceApplication;
-import com.book.verse.ecommercebook.controller.PantallaComprarController;
 import com.book.verse.ecommercebook.controller.PantallaEstadoCompraController;
 import com.book.verse.ecommercebook.model.Books;
 import javafx.event.ActionEvent;
@@ -40,7 +39,7 @@ public class BookListViewCell extends ListCell<Books> {
 
     @FXML
     void irPantallaCompra(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("PantallaEstadoCompra.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pantallacomprar.fxml"));
         Parent nextScreenParent = loader.load();
         PantallaEstadoCompraController controller = loader.getController();
 
@@ -50,7 +49,7 @@ public class BookListViewCell extends ListCell<Books> {
         // Inicializar los detalles del libro en la pantalla de estado de compra
         controller.initBookDetails(selectedBook);
 
-        Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
+        Scene nextScreenScene = new Scene(nextScreenParent, 600, 600);
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
