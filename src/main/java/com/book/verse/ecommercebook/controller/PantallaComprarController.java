@@ -25,7 +25,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class PantallaEstadoCompraController extends ListCell<Books> {
+public class PantallaComprarController extends ListCell<Books> {
 
     @FXML
     private Button botonqr;
