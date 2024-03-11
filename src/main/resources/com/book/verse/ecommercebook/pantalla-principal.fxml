@@ -5,7 +5,7 @@
 <?import javafx.scene.image.Image?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.book.verse.ecommercebook.controller.PantallaPrincipalController"
-      alignment="CENTER" style="-fx-padding: 20; -fx-spacing: 15;">
+      alignment="TOP_CENTER" style="-fx-padding: 20; -fx-spacing: 15;">
   <!-- Contenedor para la imagen con un margen inferior -->
   <VBox alignment="CENTER">
     <ImageView fitHeight="450" fitWidth="450">

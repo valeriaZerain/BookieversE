@@ -28,6 +28,9 @@ public class BooksDaoImpl implements BooksDao{
             book.setAuthor(rs.getString("author"));
             book.setPrice(rs.getDouble("price"));
             book.setTitle(rs.getString("title"));
+            book.setDescription(rs.getString("description"));
+            book.setImages(rs.getString("image"));
+            book.setStock(rs.getInt("stock"));
             listBooks.add(book);
         }
         return listBooks;
@@ -47,7 +50,9 @@ public class BooksDaoImpl implements BooksDao{
             book.setAuthor(rs.getString("author"));
             book.setPrice(rs.getDouble("price"));
             book.setTitle(rs.getString("title"));
-
+            book.setDescription(rs.getString("description"));
+            book.setImages(rs.getString("image"));
+            book.setStock(rs.getInt("stock"));
             listBooks.add(book);
         }
         return listBooks;
