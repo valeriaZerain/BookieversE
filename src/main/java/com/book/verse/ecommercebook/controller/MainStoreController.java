@@ -39,7 +39,6 @@ MainStoreController implements Initializable {
         booksResultList.addAll(response.getResultList());
     }
 
-
     @FXML
     protected void onSearchButtonClick() throws SQLException {
         listView = new ListView<>();
@@ -60,7 +59,4 @@ MainStoreController implements Initializable {
         listView.setCellFactory(bookListView -> new BookListViewCell());
         rootPane.setContent(listView);
     }
-
-
-
 }
