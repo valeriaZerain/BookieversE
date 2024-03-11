@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.book.verse.ecommercebook.Pantallaestado"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="641.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PantallaFinalController">
+   <children>
+      <Label layoutX="183.0" layoutY="143.0" text="ID order:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="75.0" text="Compra Finalizada">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="idorder" layoutX="297.0" layoutY="143.0" text="ID order">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="180.0" text="Cliente:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="cliente" layoutX="296.0" layoutY="180.0" text="Cliente">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="218.0" text="Fecha:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="fecha" layoutX="298.0" layoutY="217.0" text="Fecha">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="147.0" layoutY="254.0" text="Razón social:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="razonsocial" layoutX="297.0" layoutY="254.0" text="Razon social">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="292.0" text="NIT:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nit" layoutX="297.0" layoutY="292.0" text="NIT">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="351.0" text="Método de pago:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="metododepago" layoutX="296.0" layoutY="351.0" text="Metodo de pago">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="volveracomprar" layoutX="221.0" layoutY="561.0" mnemonicParsing="false"
+              text="Volver a comprar" onAction="#irAlMenu"/>
+      <ImageView fitHeight="121.0" fitWidth="145.0" layoutX="210.0" layoutY="415.0" pickOnBounds="true">
+         <image>
+            <Image url="@imagenes/libros.jpg" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
