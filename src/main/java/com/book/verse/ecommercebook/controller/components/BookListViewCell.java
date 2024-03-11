@@ -49,7 +49,7 @@ public class BookListViewCell extends ListCell<Books> {
         // Inicializar los detalles del libro en la pantalla de estado de compra
         controller.initBookDetails(selectedBook);
 
-        Scene nextScreenScene = new Scene(nextScreenParent, 600, 600);
+        Scene nextScreenScene = new Scene(nextScreenParent, 940, 640);
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.components.PagoTarjeta">
+   <children>
+      <Label layoutX="239.0" layoutY="35.0" text="Pago con tarjeta">
+         <font>
+            <Font name="Bodoni MT Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="287.0" layoutY="93.0" />
+      <TextField layoutX="287.0" layoutY="140.0" />
+      <TextField layoutX="289.0" layoutY="191.0" promptText="3 digitos" />
+      <TextField layoutX="289.0" layoutY="240.0" promptText="MM/AA" />
+      <Label layoutX="181.0" layoutY="97.0" text="Num. de tarjeta:" />
+      <Label layoutX="185.0" layoutY="144.0" text="Nombr. titular:" />
+      <Label layoutX="147.0" layoutY="244.0" text="Fecha de vencimiento:" />
+      <Label layoutX="96.0" layoutY="195.0" text="Codigo de seguridad(CVV/CVC):" />
+      <Button layoutX="241.0" layoutY="300.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="118.0" text="Pagar" textFill="#28c969" />
+   </children>
+</AnchorPane>
