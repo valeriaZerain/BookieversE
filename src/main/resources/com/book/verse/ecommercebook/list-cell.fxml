@@ -6,7 +6,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="gridPane" maxHeight="257.0" maxWidth="900.0" minHeight="231.0" minWidth="900.0" prefHeight="231.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="gridPane" maxHeight="257.0" maxWidth="900.0" minHeight="231.0" minWidth="900.0" prefHeight="231.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1" >
 
     <Label layoutX="209.0" layoutY="43.0" text="Autor:">
         <font>

@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 
-public class PantallaEstadoCompraController extends ListCell<Books> {
+public class PantallaComprarController extends ListCell<Books> {
 
     @FXML
     private Button botonqr;
