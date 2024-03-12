@@ -128,7 +128,7 @@ public class PantallaComprarController extends ListCell<Books> {
     }
     @FXML
     void irPantallaPaypal(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoPaypal.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoPayPal.fxml"));
         Parent nextScreenParent = loader.load();
         PagoPayPalController controller = loader.getController();
 
