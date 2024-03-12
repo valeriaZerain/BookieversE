@@ -1,6 +1,6 @@
 package com.book.verse.ecommercebook.dao;
 
-import com.book.verse.ecommercebook.dao.builder.BookBuilder;
+import com.book.verse.ecommercebook.dao.builder.BookBuilderBooks;
 import com.book.verse.ecommercebook.model.Books;
 
 import java.math.BigInteger;
@@ -22,7 +22,7 @@ public class BooksDaoImpl implements BooksDao{
                 = con.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
         List<Books> listBooks = new ArrayList();
-        BookBuilder bookBuilder = new BookBuilder();
+        BookBuilderBooks bookBuilder = new BookBuilderBooks();
 
         while (rs.next()) {
             bookBuilder.reset();
@@ -45,17 +45,17 @@ public class BooksDaoImpl implements BooksDao{
                 = con.prepareStatement(query);
         ResultSet rs = ps.executeQuery();
         List<Books> listBooks = new ArrayList();
-
+        BookBuilderBooks bookBuilder = new BookBuilderBooks();
         while (rs.next()) {
-            Books book = new Books();
-            book.setIsbn(new BigInteger(String.valueOf(rs.getLong("isbn"))));
-            book.setAuthor(rs.getString("author"));
-            book.setPrice(rs.getDouble("price"));
-            book.setTitle(rs.getString("title"));
-            book.setDescription(rs.getString("description"));
-            book.setImages(rs.getString("image"));
-            book.setStock(rs.getInt("stock"));
-            listBooks.add(book);
+            bookBuilder.reset();
+            bookBuilder.buildIsbn(new BigInteger(String.valueOf(rs.getLong("isbn"))));
+            bookBuilder.buildTitle(rs.getString("title"));
+            bookBuilder.buildAuthor(rs.getString("author"));
+            bookBuilder.buildDescription(rs.getString("description"));
+            bookBuilder.buildPrice(rs.getDouble("price"));
+            bookBuilder.buildImage(rs.getString("image"));
+            bookBuilder.buildStock(rs.getInt("stock"));
+            listBooks.add(bookBuilder.getResultBooks());
         }
         return listBooks;
     }

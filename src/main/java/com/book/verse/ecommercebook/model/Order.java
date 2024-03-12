@@ -5,10 +5,9 @@ import java.sql.Date;
 public class Order {
     private int idOrder;
     private java.sql.Date date;
-    private String state;
     private int nit;
-    private String ReceiptName;
-    private String payment;
+    private String receiptName;
+    private String paymentMethod;
     private String clientEmail;
     private boolean paymentState;
 
@@ -28,14 +27,6 @@ public class Order {
         this.date = date;
     }
 
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
     public int getNit() {
         return nit;
     }
@@ -45,19 +36,19 @@ public class Order {
     }
 
     public String getReceiptName() {
-        return ReceiptName;
+        return receiptName;
     }
 
     public void setReceiptName(String receiptName) {
-        ReceiptName = receiptName;
+        receiptName = receiptName;
     }
 
     public String getPayment() {
-        return payment;
+        return paymentMethod;
     }
 
-    public void setPayment(String payment) {
-        this.payment = payment;
+    public void setPayment(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
     public String getClientEmail() {
@@ -74,5 +65,18 @@ public class Order {
 
     public void setPaymentState(boolean paymentState) {
         this.paymentState = paymentState;
+    }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "idOrder=" + idOrder +
+                ", date='" + date + '\'' +
+                ", nit='" + nit + '\'' +
+                ", receiptName=" + receiptName +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", idClientEmail=" + clientEmail +
+                ", paymentState='" + paymentState + '\'' +
+                '}';
     }
 }

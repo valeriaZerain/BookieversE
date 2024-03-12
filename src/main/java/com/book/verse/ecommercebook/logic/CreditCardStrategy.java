@@ -5,4 +5,8 @@ public class CreditCardStrategy implements PaymentStrategy{
     public String pay(double ammount) {
         return "Se realizo el pago de " +  ammount + " Bs. con su tarjeta de crédito";
     }
+    @Override
+    public String toString(){
+        return "Tarjeta De Credito";
+    }
 }

@@ -1,10 +1,8 @@
 package com.book.verse.ecommercebook.dao.builder;
 
-import com.book.verse.ecommercebook.model.Books;
-
 import java.math.BigInteger;
 
-public interface Builder {
+public interface BuilderBooks {
     void reset();
     void buildIsbn(BigInteger isbn);
     void buildTitle(String title);

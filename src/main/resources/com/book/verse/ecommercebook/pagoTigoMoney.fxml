@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="440.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PagoTigoMoneyController">
+   <children>
+      <Label layoutX="239.0" layoutY="37.0" text="Pago con TigoMoney">
+         <font>
+            <Font name="Times New Roman Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="QrTigoImage" fitHeight="169.0" fitWidth="169.0" layoutX="236.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+      <Label layoutX="262.0" layoutY="260.0" text="Cuenta: BookBox">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="272.0" layoutY="291.0" text="C.I.: 12345321">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="verifyButton" layoutX="275.0" layoutY="343.0" mnemonicParsing="false" text="Verificar pago" textFill="#2da814" />
+      <Label fx:id="lblVerify" alignment="CENTER" layoutX="180.0" layoutY="368.0" prefHeight="17.0" prefWidth="281.0" />
+      <Button fx:id="buttonNext" layoutX="286.0" layoutY="393.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="66.0" text="Siguiente" />
+   </children>
+</AnchorPane>

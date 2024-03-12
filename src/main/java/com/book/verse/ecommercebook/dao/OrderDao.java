@@ -5,4 +5,5 @@ import java.sql.SQLException;
 
 public interface OrderDao {
     void addOrder(Order order) throws SQLException;
+    public Order getOrderById(int id) throws SQLException;
 }
