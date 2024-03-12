@@ -52,12 +52,7 @@
             <Font name="Times New Roman" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="quantityShop" layoutX="276.0" layoutY="362.0" prefHeight="26.0" prefWidth="42.0" promptText="ej: 1">
-         <font>
-            <Font name="Times New Roman" size="13.0" />
-         </font>Sce
-      </TextField>
-      <Button fx:id="botonTigoMoney" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" onAction="#irpantallaTigoMoney" prefHeight="42.0" prefWidth="84.0" text="TigoMoney" textFill="#3034b2" />
+      <Button fx:id="botonTigoMoney" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" onAction="#irPantallaTigoMoney" prefHeight="42.0" prefWidth="84.0" text="TigoMoney" textFill="#3034b2" />
       <Label layoutX="277.0" layoutY="202.0" prefHeight="27.0" prefWidth="194.0" text="Nombre">
          <font>
             <Font name="Times New Roman" size="16.0" />
@@ -95,5 +90,6 @@
          </font>
       </Label>
       <Button fx:id="buttonVerify" layoutX="334.0" layoutY="363.0" mnemonicParsing="false" onAction="#onVerifyButtonClick" text="Verificar disponibilidad" />
+      <TextField fx:id="quantityShop" layoutX="277.0" layoutY="363.0" prefHeight="25.0" prefWidth="42.0" />
    </children>
 </AnchorPane>

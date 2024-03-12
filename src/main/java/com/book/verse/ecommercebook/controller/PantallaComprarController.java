@@ -60,17 +60,12 @@ public class PantallaComprarController extends ListCell<Books> {
     @FXML
     private TextField quantityShop;
 
-    private double totalprice;
 
     private FXMLLoader fxmlLoader;
-
     private Pane gridPane;
     private PurchaseStateImpl searchProcess = new PurchaseStateImpl();
     private Books book;
 
-    public double getTotalprice(){
-        return totalprice;
-    }
 
     public void initBookDetails(Books book) {
         tituloCompra.setText(book.getTitle());
@@ -101,6 +96,9 @@ public class PantallaComprarController extends ListCell<Books> {
         Parent nextScreenParent = loader.load();
         PagoTarjetaController controller = loader.getController();
 
+        controller.setOrderDetail(createOrderDetail());
+        controller.setIdClientEmail(emailShop.getText());
+
         Scene nextScreenScene = new Scene(nextScreenParent, 600, 400);
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
@@ -111,13 +109,15 @@ public class PantallaComprarController extends ListCell<Books> {
 
     @FXML
 
-    void irpantallaTigoMoney(ActionEvent event) throws IOException {
+    void irPantallaTigoMoney(ActionEvent event) throws IOException {
 
-        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoTigoMoney.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagotigo.fxml"));
         Parent nextScreenParent = loader.load();
         PagoTigoMoneyController controller = loader.getController();
+
         controller.setOrderDetail(createOrderDetail());
         controller.setIdClientEmail(emailShop.getText());
+
         Scene nextScreenScene = new Scene(nextScreenParent, 640, 440);
 
 
@@ -128,9 +128,12 @@ public class PantallaComprarController extends ListCell<Books> {
     }
     @FXML
     void irPantallaPaypal(ActionEvent event)throws IOException{
-        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoPayPal.fxml"));
+        FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagopaypal.fxml"));
         Parent nextScreenParent = loader.load();
         PagoPayPalController controller = loader.getController();
+
+        controller.setOrderDetail(createOrderDetail());
+        controller.setIdClientEmail(emailShop.getText());
 
         Scene nextScreenScene = new Scene(nextScreenParent, 640, 440);
 

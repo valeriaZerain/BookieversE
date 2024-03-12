@@ -40,7 +40,7 @@ public class Order {
     }
 
     public void setReceiptName(String receiptName) {
-        receiptName = receiptName;
+        this.receiptName = receiptName;
     }
 
     public String getPayment() {

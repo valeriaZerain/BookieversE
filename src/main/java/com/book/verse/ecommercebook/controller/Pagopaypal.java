@@ -34,8 +34,6 @@ public class Pagopaypal {
 
     }
 
-//    PantallaEstadoCompraController pantallaEstadoCompraController = new PantallaEstadoCompraController();
-
     public void initMonto (double totalPrice) {
                 montopagopp.setText(totalPrice + "");
 
