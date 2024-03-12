@@ -40,7 +40,7 @@ public class Order {
     }
 
     public void setReceiptName(String receiptName) {
-        receiptName = receiptName;
+        this.receiptName = receiptName;
     }
 
     public String getPayment() {
@@ -69,7 +69,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Books{" +
+        return "Order{" +
                 "idOrder=" + idOrder +
                 ", date='" + date + '\'' +
                 ", nit='" + nit + '\'' +

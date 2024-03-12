@@ -1,20 +1,24 @@
 package com.book.verse.ecommercebook.controller;
 
+import com.book.verse.ecommercebook.EcommerceApplication;
+import com.book.verse.ecommercebook.dao.builder.OrderBuilderOrders;
 import com.book.verse.ecommercebook.logic.PaymentStrategy;
 import com.book.verse.ecommercebook.logic.TigoMoneyStrategy;
 import com.book.verse.ecommercebook.model.Order;
 import com.book.verse.ecommercebook.model.OrderDetail;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
-public class PagoTigoMoneyController {
-    private Order order;
-    private OrderDetail orderDetail;
-    private PaymentStrategy paymentStrategy;
-    private String idClientEmail;
+import java.io.IOException;
+import java.time.LocalDate;
 
-    @FXML
-    private Button verifyButton;
+public class PagoTigoMoneyController extends PayController{
 
     public PagoTigoMoneyController() {
         paymentStrategy = new TigoMoneyStrategy();
@@ -27,12 +31,4 @@ public class PagoTigoMoneyController {
         return orderDetail;
     }
 
-    public void setIdClientEmail(String idClientEmail) {
-        this.idClientEmail = idClientEmail;
-    }
-
-    public void setOrderDetail(OrderDetail orderDetail) {
-        this.orderDetail = orderDetail;
-        System.out.println("Se recibio la clase " + orderDetail.toString());
-    }
 }

@@ -36,7 +36,7 @@ public class OrderBuilderOrders implements BuilderOrders{
 
     @Override
     public void buildReceiptName(String receiptName) {
-        if(receiptName.equals("")){
+        if(receiptName==null){
             receiptName = "s/n";
         }
         order.setReceiptName(receiptName);
