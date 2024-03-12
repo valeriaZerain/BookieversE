@@ -14,7 +14,7 @@ public class OrderDaoImpl implements OrderDao{
             = DatabaseSingleton.getInstance().getConnection();
     @Override
     public void addOrder(Order order) throws SQLException {
-        String sql = "INSERT INTO railway.`order` (`Date`,,Nit,ReceiptName,payment,idClientEmail,paymentState) VALUES (?, ?, ?, ?, ?, ?,)";
+        String sql = "INSERT INTO railway.`order` (`Date`, Nit, ReceiptName, paymentMethod, idClientEmail, paymentState) VALUES (?, ?, ?, ?, ?, ?)";
         PreparedStatement pstm = con.prepareStatement(sql);
 
         pstm.setDate(1, order.getDate());
@@ -26,8 +26,9 @@ public class OrderDaoImpl implements OrderDao{
 
         pstm.executeUpdate();
 
-        System.out.println("Orden annadida correctamente");
+        System.out.println("Orden añadida correctamente");
     }
+
 
     public Order getOrderById(int id) throws SQLException {
         String query = "select * from order where idOrder like ?";

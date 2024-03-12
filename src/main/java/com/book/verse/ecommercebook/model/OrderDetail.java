@@ -59,7 +59,7 @@ public class OrderDetail {
     }
     @Override
     public String toString(){
-        return "Books{" +
+        return "OrderDetail{" +
                 "idDetail=" + idDetail +
                 ", idOrder='" + order + '\'' +
                 ", isbn='" + isbn + '\'' +

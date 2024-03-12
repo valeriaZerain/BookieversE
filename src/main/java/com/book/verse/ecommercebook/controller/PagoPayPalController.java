@@ -1,7 +1,6 @@
 package com.book.verse.ecommercebook.controller;
 
 import com.book.verse.ecommercebook.logic.PaypalStrategy;
-import com.book.verse.ecommercebook.logic.TigoMoneyStrategy;
 import com.book.verse.ecommercebook.model.Order;
 import com.book.verse.ecommercebook.model.OrderDetail;
 

@@ -14,14 +14,13 @@ public class OrderDetailDaoImpl implements OrderDetailDao{
             = DatabaseSingleton.getInstance().getConnection();
     @Override
     public void addOrderDetail(OrderDetail orderDetail) throws SQLException {
-        String sql = "INSERT INTO railway.order_detail (IDOrder,ISBN,Quantity,TotalPrice,UnitPrice) VALUES (?,?,?,?,?)";
+        String sql = "INSERT INTO railway.order_detail (ISBN,Quantity,TotalPrice,UnitPrice) VALUES (?,?,?,?)";
         PreparedStatement pstm = con.prepareStatement(sql);
 
-        pstm.setInt(1, orderDetail.getOrder());
-        pstm.setLong(2, orderDetail.getIsbn().longValue());
-        pstm.setInt(3, orderDetail.getQuantity());
-        pstm.setDouble(4, orderDetail.getTotalPrice());
-        pstm.setDouble(5,orderDetail.getUnitPrice());
+        pstm.setLong(1, orderDetail.getIsbn().longValue());
+        pstm.setInt(2, orderDetail.getQuantity());
+        pstm.setDouble(3, orderDetail.getTotalPrice());
+        pstm.setDouble(4,orderDetail.getUnitPrice());
 
         pstm.executeUpdate();
 

@@ -15,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDate;
 
 public class PayController {
@@ -39,6 +40,7 @@ public class PayController {
 
     public void setOrderDetail(OrderDetail orderDetail) {
         this.orderDetail = orderDetail;
+        System.out.println(orderDetail.toString());
         montoTotal.setText(Double.toString(orderDetail.getTotalPrice()));
     }
 
@@ -49,7 +51,6 @@ public class PayController {
         java.sql.Date fechaSql = java.sql.Date.valueOf(fechaActual);
         builderOrders.buildDate(fechaSql);
         builderOrders.buildReceiptName(textFieldReceipt.getText());
-        System.out.println(textFieldReceipt.getText());
         builderOrders.buildNit(Integer.parseInt(textFieldNIT.getText()));
         builderOrders.buildPaymentMethod(paymentStrategy.toString());
         builderOrders.buildClientEmail(idClientEmail);
@@ -57,7 +58,7 @@ public class PayController {
         return builderOrders.getResultOrder();
     }
 
-    public void irPantallaFinal(ActionEvent event) throws IOException {
+    public void irPantallaFinal(ActionEvent event) throws IOException, SQLException {
         FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pantallaestado.fxml"));
         Parent nextScreenParent = loader.load();
         PantallaFinalController controller = loader.getController();
@@ -71,6 +72,7 @@ public class PayController {
 
         window.setScene(nextScreenScene);
         window.show();
+        controller.initFields();
     }
 
     public void setIdClientEmail(String idClientEmail) {

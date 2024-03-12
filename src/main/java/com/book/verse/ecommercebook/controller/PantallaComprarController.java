@@ -65,6 +65,7 @@ public class PantallaComprarController extends ListCell<Books> {
     private Pane gridPane;
     private PurchaseStateImpl searchProcess = new PurchaseStateImpl();
     private Books book;
+    private OrderDetail orderDetail;
 
 
     public void initBookDetails(Books book) {
@@ -96,7 +97,8 @@ public class PantallaComprarController extends ListCell<Books> {
         Parent nextScreenParent = loader.load();
         PagoTarjetaController controller = loader.getController();
 
-        controller.setOrderDetail(createOrderDetail());
+        orderDetail = createOrderDetail();
+        controller.setOrderDetail(orderDetail);
         controller.setIdClientEmail(emailShop.getText());
 
         Scene nextScreenScene = new Scene(nextScreenParent, 600, 400);
@@ -114,8 +116,8 @@ public class PantallaComprarController extends ListCell<Books> {
         FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagotigo.fxml"));
         Parent nextScreenParent = loader.load();
         PagoTigoMoneyController controller = loader.getController();
-
-        controller.setOrderDetail(createOrderDetail());
+        orderDetail = createOrderDetail();
+        controller.setOrderDetail(orderDetail);
         controller.setIdClientEmail(emailShop.getText());
 
         Scene nextScreenScene = new Scene(nextScreenParent, 640, 440);
@@ -131,8 +133,8 @@ public class PantallaComprarController extends ListCell<Books> {
         FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoPayPal.fxml"));
         Parent nextScreenParent = loader.load();
         PagoPayPalController controller = loader.getController();
-
-        controller.setOrderDetail(createOrderDetail());
+        orderDetail = createOrderDetail();
+        controller.setOrderDetail(orderDetail);
         controller.setIdClientEmail(emailShop.getText());
 
         Scene nextScreenScene = new Scene(nextScreenParent, 640, 440);
@@ -183,6 +185,7 @@ public class PantallaComprarController extends ListCell<Books> {
         builderDetail.buildQuantity(Integer.parseInt(quantityShop.getText()));
         builderDetail.buildUnitPrice(book.getPrice());
         builderDetail.buildTotalPrice(book.getPrice() * (double)Integer.parseInt(quantityShop.getText()));
+
         return builderDetail.getResultDetail();
     }
 }

@@ -69,7 +69,7 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Books{" +
+        return "Order{" +
                 "idOrder=" + idOrder +
                 ", date='" + date + '\'' +
                 ", nit='" + nit + '\'' +

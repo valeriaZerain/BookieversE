@@ -7,11 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-
 <AnchorPane prefHeight="641.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PantallaFinalController">
    <children>
-      <Label layoutX="183.0" layoutY="143.0" text="ID order:">
+      <Label layoutX="169.0" layoutY="143.0" text="ISBN Libro">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
@@ -21,17 +19,17 @@
             <Font name="Bookshelf Symbol 7" size="22.0" />
          </font>
       </Label>
-      <Label fx:id="idorder" layoutX="297.0" layoutY="143.0" text="ID order">
+      <Label fx:id="lblIdBook" layoutX="297.0" layoutY="143.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="191.0" layoutY="180.0" text="Cliente:">
+      <Label layoutX="183.0" layoutY="180.0" text="Cantidad">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="cliente" layoutX="296.0" layoutY="180.0" text="Cliente">
+      <Label fx:id="lblQuantity" layoutX="296.0" layoutY="180.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
@@ -41,7 +39,7 @@
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="fecha" layoutX="298.0" layoutY="217.0" text="Fecha">
+      <Label fx:id="lblDate" layoutX="298.0" layoutY="217.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
@@ -51,7 +49,7 @@
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="razonsocial" layoutX="297.0" layoutY="254.0" text="Razon social">
+      <Label fx:id="lblReceiptName" layoutX="297.0" layoutY="254.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
@@ -61,28 +59,36 @@
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="nit" layoutX="297.0" layoutY="292.0" text="NIT">
+      <Label fx:id="lblNit" layoutX="297.0" layoutY="292.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="125.0" layoutY="351.0" text="Método de pago:">
+      <Label layoutX="140.0" layoutY="323.0" text="Monto pagado:">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Label fx:id="metododepago" layoutX="296.0" layoutY="351.0" text="Metodo de pago">
+      <Label fx:id="lblTotalPayed" layoutX="297.0" layoutY="323.0" text="-">
          <font>
             <Font name="Bookshelf Symbol 7" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="volveracomprar" layoutX="221.0" layoutY="561.0" mnemonicParsing="false"
-              text="Volver a comprar" onAction="#irAlMenu"/>
+      <Button fx:id="volveracomprar" layoutX="221.0" layoutY="561.0" mnemonicParsing="false" onAction="#irAlMenu" text="Volver a comprar" />
       <ImageView fitHeight="121.0" fitWidth="145.0" layoutX="210.0" layoutY="415.0" pickOnBounds="true">
          <image>
             <Image url="@imagenes/libros.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="133.0" layoutY="361.0" text="Método de pago:">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPaymentMethod" layoutX="301.0" layoutY="363.0" text="-">
+         <font>
+            <Font name="Bookshelf Symbol 7" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
-
