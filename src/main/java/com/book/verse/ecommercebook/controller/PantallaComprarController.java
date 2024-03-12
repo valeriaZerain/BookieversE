@@ -1,15 +1,10 @@
 package com.book.verse.ecommercebook.controller;
 
 import com.book.verse.ecommercebook.EcommerceApplication;
-import com.book.verse.ecommercebook.dao.ClientDaoImpl;
-import com.book.verse.ecommercebook.dao.builder.BuilderDetail;
 import com.book.verse.ecommercebook.dao.builder.DetailsBuilderDetail;
 import com.book.verse.ecommercebook.data.SearchClientResponse;
-import com.book.verse.ecommercebook.logic.PaypalStrategy;
-import com.book.verse.ecommercebook.logic.PurchaceState;
 import com.book.verse.ecommercebook.logic.PurchaseStateImpl;
 import com.book.verse.ecommercebook.model.Books;
-import com.book.verse.ecommercebook.model.Client;
 import com.book.verse.ecommercebook.model.OrderDetail;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +24,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class PantallaEstadoCompraController extends ListCell<Books> {
+public class PantallaComprarController extends ListCell<Books> {
 
     @FXML
     private Button botonPaypal;
@@ -65,11 +60,18 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
     @FXML
     private TextField quantityShop;
 
+    private double totalprice;
+
     private FXMLLoader fxmlLoader;
 
     private Pane gridPane;
     private PurchaseStateImpl searchProcess = new PurchaseStateImpl();
     private Books book;
+
+    public double getTotalprice(){
+        return totalprice;
+    }
+
     public void initBookDetails(Books book) {
         tituloCompra.setText(book.getTitle());
         precioCompra.setText(book.getPrice().toString());
@@ -108,6 +110,7 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
     }
 
     @FXML
+
     void irpantallaTigoMoney(ActionEvent event) throws IOException {
 
         FXMLLoader loader = new FXMLLoader(EcommerceApplication.class.getResource("pagoTigoMoney.fxml"));
@@ -116,6 +119,7 @@ public class PantallaEstadoCompraController extends ListCell<Books> {
         controller.setOrderDetail(createOrderDetail());
         controller.setIdClientEmail(emailShop.getText());
         Scene nextScreenScene = new Scene(nextScreenParent, 640, 440);
+
 
         Stage window = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
 
