@@ -1,9 +1,12 @@
 package com.book.verse.ecommercebook.dao;
 
+import com.book.verse.ecommercebook.dao.builder.DetailsBuilderDetail;
 import com.book.verse.ecommercebook.model.OrderDetail;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class OrderDetailDaoImpl implements OrderDetailDao{
@@ -23,5 +26,24 @@ public class OrderDetailDaoImpl implements OrderDetailDao{
         pstm.executeUpdate();
 
         System.out.println("Detalle de orden annadida correctamente");
+    }
+
+    @Override
+    public OrderDetail getOrderDetailById(int id) throws SQLException {
+        String query = "select * from order_detail where idDetail like ?";
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setString(1, "%" + id + "%");
+        ResultSet rs = ps.executeQuery();
+        DetailsBuilderDetail details = new DetailsBuilderDetail();
+        if (rs.next()) {
+            details.reset();
+            details.buildId(rs.getInt("idDetail"));
+            details.buildOrder(rs.getInt("idOrder"));
+            details.buildIsbn(new BigInteger(String.valueOf(rs.getLong("isbn"))));
+            details.buildQuantity(rs.getInt("quantity"));
+            details.buildTotalPrice(rs.getDouble("totalPrice"));
+            details.buildUnitPrice(rs.getDouble("unitPrice"));
+        }
+        return details.getResultDetail();
     }
 }

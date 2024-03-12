@@ -34,7 +34,8 @@
          </font>
       </Label>
       <Button fx:id="botonTarjeta" layoutX="45.0" layoutY="386.0" mnemonicParsing="false" onAction="#IrPagoTarjeta" prefHeight="42.0" prefWidth="84.0" text="Tarjeta de crédito" textAlignment="CENTER" textFill="#5287d1" wrapText="true" />
-      <Button fx:id="botonPaypal" layoutX="45.0" layoutY="438.0" mnemonicParsing="false" onAction="#irpantallapaypal" prefHeight="42.0" prefWidth="84.0" text="PayPal" textFill="#b42fb2" />
+      <Button fx:id="botonPaypal" layoutX="45.0" layoutY="438.0" mnemonicParsing="false" onAction="#irPantallaPaypal" prefHeight="42.0" prefWidth="84.0" text="PayPal" textFill="#b42fb2" />
+
       <Button fx:id="cancelarCompra" layoutX="540.0" layoutY="491.0" mnemonicParsing="false" onAction="#volverLista" prefHeight="35.0" prefWidth="114.0" text="Cancelar compra" textFill="#e11a1a" />
       <ImageView fx:id="imagenCompra" fitHeight="283.0" fitWidth="216.0" layoutX="44.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
       <Label fx:id="precioCompra" contentDisplay="RIGHT" layoutX="279.0" layoutY="96.0" text="00.00">
@@ -56,7 +57,7 @@
             <Font name="Times New Roman" size="13.0" />
          </font>Sce
       </TextField>
-      <Button fx:id="botonTigoMoney" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" onAction="#irpantallatigo" prefHeight="42.0" prefWidth="84.0" text="TigoMoney" textFill="#3034b2" />
+      <Button fx:id="botonTigoMoney" layoutX="45.0" layoutY="487.0" mnemonicParsing="false" onAction="#irpantallaTigoMoney" prefHeight="42.0" prefWidth="84.0" text="TigoMoney" textFill="#3034b2" />
       <Label layoutX="277.0" layoutY="202.0" prefHeight="27.0" prefWidth="194.0" text="Nombre">
          <font>
             <Font name="Times New Roman" size="16.0" />

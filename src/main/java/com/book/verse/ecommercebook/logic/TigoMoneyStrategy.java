@@ -7,4 +7,8 @@ public class TigoMoneyStrategy implements PaymentStrategy {
     public String pay(double ammount) {
         return "Se realizo el pago de " +  ammount + " Bs. con Tigo Money";
     }
+    @Override
+    public String toString(){
+        return "TigoMoney";
+    }
 }

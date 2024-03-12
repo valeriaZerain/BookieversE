@@ -44,9 +44,6 @@ public class Books {
     }
 
     public String getDescription() {
-        if(description.equals("")){
-            description = "No hay una descripción";
-        }
         return description;
     }
 

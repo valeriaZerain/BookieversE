@@ -4,9 +4,9 @@ import com.book.verse.ecommercebook.model.Books;
 
 import java.math.BigInteger;
 
-public class BookBuilder implements Builder{
+public class BookBuilderBooks implements BuilderBooks {
     private Books books;
-    public BookBuilder(){
+    public BookBuilderBooks(){
         this.reset();
     }
 
@@ -37,6 +37,9 @@ public class BookBuilder implements Builder{
 
     @Override
     public void buildDescription(String description) {
+        if(description.equals("")){
+            description = "No hay una descripción";
+        }
         books.setDescription(description);
     }
 

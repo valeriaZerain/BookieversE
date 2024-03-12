@@ -6,4 +6,5 @@ import java.sql.SQLException;
 
 public interface OrderDetailDao {
     void addOrderDetail(OrderDetail orderDetail)throws SQLException;
+    OrderDetail getOrderDetailById(int id)throws SQLException;
 }
