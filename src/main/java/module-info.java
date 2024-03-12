@@ -12,4 +12,7 @@ module com.book.verse.ecommercebook {
     exports com.book.verse.ecommercebook;
     exports com.book.verse.ecommercebook.controller;
     opens com.book.verse.ecommercebook.controller to javafx.fxml;
+    opens com.book.verse.ecommercebook.controller.components to javafx.fxml;
+    opens com.book.verse.ecommercebook.model to javafx.base;
+    exports com.book.verse.ecommercebook.controller.components;
 }

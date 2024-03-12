@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.book.verse.ecommercebook.controller.PagoTarjetaController">
+   <children>
+      <Label layoutX="231.0" layoutY="35.0" text="Pago con tarjeta">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="296.0" layoutY="72.0" promptText="XXXX-XXXX-XXXX" />
+      <TextField layoutX="292.0" layoutY="108.0" promptText="ej: Juan Perez" />
+      <TextField layoutX="290.0" layoutY="141.0" promptText="3 digitos" />
+      <TextField layoutX="289.0" layoutY="175.0" promptText="MM/AA" />
+      <Label layoutX="190.0" layoutY="76.0" text="Num. de tarjeta:">
+         <font>
+            <Font name="Bodoni MT" size="12.0" />
+         </font></Label>
+      <Label layoutX="190.0" layoutY="112.0" text="Nombr. titular:">
+         <font>
+            <Font name="Bodoni MT" size="12.0" />
+         </font></Label>
+      <Label layoutX="152.0" layoutY="180.0" text="Fecha de vencimiento:">
+         <font>
+            <Font name="Bodoni MT" size="12.0" />
+         </font></Label>
+      <Label layoutX="109.0" layoutY="146.0" text="Codigo de seguridad(CVV/CVC):">
+         <font>
+            <Font name="Bodoni MT" size="12.0" />
+         </font></Label>
+      <Label layoutX="176.0" layoutY="213.0" text="Monto Total:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="montoTotal" layoutX="331.0" layoutY="215.0" text="0.00">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="377.0" layoutY="214.0" text="Bs.">
+         <font>
+            <Font name="Bodoni MT Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="payButton" layoutX="184.0" layoutY="339.0" mnemonicParsing="false" onAction="#onPayButtonClick" prefHeight="33.0" prefWidth="90.0" text="Pagar" textAlignment="CENTER" wrapText="true" />
+      <Button fx:id="nextButton" layoutX="355.0" layoutY="339.0" mnemonicParsing="false" onAction="#irPantallaFinal" prefHeight="33.0" prefWidth="90.0" text="Continuar" />
+      <Label layoutX="133.0" layoutY="244.0" text="Nombre/Razón Social:">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="231.0" layoutY="274.0" text="NIT:">
+         <font>
+            <Font name="Bodoni MT" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldReceipt" layoutX="280.0" layoutY="240.0" prefHeight="25.0" prefWidth="201.0" />
+      <TextField fx:id="textFieldNIT" layoutX="280.0" layoutY="270.0" />
+      <Label fx:id="lblMessage" layoutX="186.0" layoutY="303.0" text="-">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

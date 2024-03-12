@@ -1,16 +1,16 @@
 package com.book.verse.ecommercebook.model;
 
 public class Client {
-    private int id;
+    private String idEmail;
     private String name;
     private String lastname;
     private String address;
 
-    public void setId(int id) {
-        this.id = id;
+    public String getIdEmail() {
+        return this.idEmail;
     }
-    public int getId() {
-        return id;
+    public void setIdEmail(String idEmail) {
+        this.idEmail = idEmail;
     }
 
     public String getName() {
@@ -32,5 +32,15 @@ public class Client {
     }
     public String getAddress() {
         return address;
+    }
+
+    @Override
+    public String toString(){
+        return "Client{" +
+                "idClientEmail=" + idEmail +
+                ", name='" + name + '\'' +
+                ", lastname='" + lastname + '\'' +
+                ", address=" + address +
+                '}';
     }
 }
